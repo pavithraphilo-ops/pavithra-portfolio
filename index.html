@@ -664,7 +664,7 @@ p {
   gap: 18px;
   margin-top: 42px;
 }
-.stats div {
+.stats a, .stats div {
   background: var(--surface-card);
   border: 1px solid var(--line);
   border-radius: 20px;
@@ -674,11 +674,18 @@ p {
   text-align: center;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
 }
-.stats div:hover {
+.stats a:hover, .stats div:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
   box-shadow: var(--shadow-hover);
+}
+.stats a:hover b, .stats div:hover b {
+  filter: brightness(1.15);
 }
 .stats b {
   display: block;
@@ -1531,11 +1538,11 @@ dialog::backdrop {
 </div>
 </div>
 <div class="stats rv">
-<div><b data-n="4">0</b><span>Projects built</span></div>
-<div><b data-n="1">0</b><span>Internship, May–June 2026</span></div>
-<div><b data-n="2" data-s="nd">0</b><span>Prize at the SVIT hackathon</span></div>
-<div><b data-n="1000" data-s="+">0</b><span>Records digitised with OCR</span></div>
-<div><b data-n="1000" data-s="+">0</b><span>People anchored events for</span></div>
+<a href="#projects" class="stat-card" title="View Projects"><b data-n="4">0</b><span>Projects built</span></a>
+<a href="#experience" class="stat-card" title="View Internship Experience"><b data-n="1">0</b><span>Internship, May–June 2026</span></a>
+<a href="#hackathon" class="stat-card" title="View Hackathon Project"><b data-n="2" data-s="nd">0</b><span>Prize at the SVIT hackathon</span></a>
+<a href="#project-medical" class="stat-card" title="View Medical Camp OCR Project"><b data-n="1000" data-s="+">0</b><span>Records digitised with OCR</span></a>
+<a href="#achievements" class="stat-card" title="View Achievements & Speaking"><b data-n="1000" data-s="+">0</b><span>People anchored events for</span></a>
 </div></section>
 
 <section id="skills"><h2>Skills</h2><p class="kick">What I use most, and how comfortable I am with it.</p>
